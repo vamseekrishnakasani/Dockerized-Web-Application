@@ -10,6 +10,7 @@ COPY package-lock.json .
 
 #install all the React.js application dependencies
 RUN npm i
+RUN npm install -g npm@10.4.0
 
 #copy files from local React folder to container workdir folder
 COPY . .
