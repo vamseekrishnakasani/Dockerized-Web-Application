@@ -1,5 +1,5 @@
 #building the Docker image
-FROM node:19-alpine3.16
+FROM node:14-alpine3.16
 
 #image will be created in this working directory.
 WORKDIR /react-app
@@ -9,7 +9,7 @@ COPY package.json .
 COPY package-lock.json .
 
 #install all the React.js application dependencies
-RUN npm install -g npm@10.4.0
+RUN npm install
 
 #copy files from local React folder to container workdir folder
 COPY . .
